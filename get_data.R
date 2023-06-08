@@ -17,6 +17,6 @@ df_software$date_scraped <- Sys.Date()
 df_servers <- as.data.frame(fromJSON(rawToChar(res_servers$content))$data)
 df_servers$date_scraped <- Sys.Date()
 
-write.csv(df_software, "data/raw/software.csv", row.names = FALSE)
-write.csv(df_servers, "data/raw/servers.csv", row.names = FALSE)
+write.csv(df_software, "data/raw/fedidb_software.csv", row.names = FALSE)
+write.csv(df_servers, "data/raw/fedidb_servers.csv", row.names = FALSE)
 
